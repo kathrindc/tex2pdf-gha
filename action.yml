@@ -1,0 +1,11 @@
+name: 'pdf2tex'
+description: 'Compile LaTeX document'
+inputs:
+  document:
+    description: 'Filename of the main document'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.document }}
